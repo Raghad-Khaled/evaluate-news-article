@@ -1,4 +1,3 @@
-// TODO: Configure the environment variables
 //console.log('server');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -26,13 +25,7 @@ app.use(bodyParser.json());
 
 app.use(express.static('dist'))
 
-
-
-
 const PORT = 8084
-
-
-
 app.get('/', function (req, res) {
      //res.sendFile('dist/index.html')
     res.sendFile(path.resolve('src/client/views/index.html'))
@@ -42,11 +35,6 @@ app.get('/', function (req, res) {
 app.get('/api', function (req, res) {
     res.send(mockAPIResponse)
 })
-
-
-
-//console.log(`API Key ${process.env.API_KEY}`);
-//let userInput = [] // const does not work
 
 app.post('/api', async function(req, res) {
     const apiKey = process.env.API_KEY
@@ -77,5 +65,5 @@ app.listen(PORT, (error) => {
     console.log(`Server listening on port ${PORT}!`)
 })
 
-// TODO: export app to use it in the unit testing
+
 
