@@ -18,12 +18,14 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "node-fetch": "^3.0.0",
+    "regenerator-runtime": "^0.13.9",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.15.8",
     "@types/jest": "^26.0.20",
     "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",

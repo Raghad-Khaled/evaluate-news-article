@@ -1,7 +1,9 @@
+import "babel-polyfill";
+
 import {checkForURL} from './checkURL'
 
-    function handelSubmit(e) {
-    e.preventDefault()
+    function handelSubmit(event) {
+    event.preventDefault()
     let URL =document.getElementById('article-url').value;
 
     if(checkForURL(URL)){

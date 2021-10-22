@@ -1,5 +1,7 @@
 // Import the js file to test
-import {  handelSubmit } from "../src/client/js/handelSubmit"
+import { handelSubmit } from "../src/client/js/handelSubmit"
+import "babel-polyfill";
+import 'regenerator-runtime/runtime'
 
 // The describe() function takes two arguments - a string description, and a test suite as a callback function.  
 // A test suite may contain one or more related tests    
@@ -12,5 +14,7 @@ describe("Testing the handel function", () => {
            // The expect() function, in combination with a Jest matcher, is used to check if the function produces the expected output
            // The general syntax is `expect(myFunction(arg1, arg2, ...)).toEqual(expectedValue);`, where `toEqual()` is a matcher
            //expect(checkForURL(arg1)).toBeDefined();
-           expect(handelSubmit()).toBeDefined();
+           expect(handelSubmit).toBeDefined();
+           expect(typeof(handelSubmit)).toBe("function");
+
 })});

@@ -1,4 +1,4 @@
-
+import "babel-polyfill";
     function checkForURL(inputURL) {
         console.log("::: Running checkForURL :::", inputURL);
         var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
